@@ -1,7 +1,7 @@
 import requests
 
 
-def chatbot(message):
-    API = f"http://yumikoapi.herokuapp.com/chatbot?message={message}"
+def chatbot(text):
+    API = f"http://yumikoapi.herokuapp.com/chatbot?text={text}"
     req = requests.get(API).json()["url"]
     return(req)
